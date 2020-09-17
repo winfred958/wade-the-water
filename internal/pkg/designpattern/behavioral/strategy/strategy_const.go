@@ -1,0 +1,9 @@
+package strategy
+
+/**
+策略名称常量
+*/
+const (
+	PROMOTION_COUPON_STRATEGY   = "COUPON_STRATEGY"
+	PROMOTION_CASHBACK_STRATEGY = "CASHBACK_STRATEGY"
+)
