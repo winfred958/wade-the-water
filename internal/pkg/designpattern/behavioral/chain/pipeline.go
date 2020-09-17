@@ -2,8 +2,12 @@ package chain
 
 import (
 	"fmt"
+	"reflect"
 )
 
+/**
+entity
+*/
 type Request struct {
 	tagId string
 }
@@ -50,7 +54,7 @@ func (pipeline *PipelineImpl) AddLast(handler Handler) {
 
 func (pipeline *PipelineImpl) DoHandler(request Request, response Response) {
 	for index, handler := range pipeline.handlers {
-		fmt.Println("handler index: ", index, "->", &handler)
+		fmt.Println("handler index: ", index, " -> ", &handler, " -> ", reflect.TypeOf(handler))
 		handler.DoHandler(request, response)
 	}
 }
