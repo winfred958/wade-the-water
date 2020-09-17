@@ -44,8 +44,6 @@ type PipelineImpl struct {
 }
 
 func (pipeline *PipelineImpl) AddLast(handler Handler) {
-	var hs []Handler
-	hs = append(hs, handler)
 	if pipeline.handlers == nil || len(pipeline.handlers) < 1 {
 		pipeline.handlers = []Handler{}
 	}
