@@ -17,7 +17,7 @@ func TestPipeline(t *testing.T) {
 
 func TestPipelineImpl(t *testing.T) {
 
-	pip := new(PipelineImpl)
+	var pip Pipeline = new(PipelineImpl)
 	metricsHandler := new(MetricsHandler)
 	globalHandler := new(GlobalHandler)
 
